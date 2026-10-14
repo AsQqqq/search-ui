@@ -8,6 +8,8 @@ const nextConfig: NextConfig = {
   output: "export",
   basePath,
   images: { unoptimized: true },
+  // Для путей в обычном <img> / fetch: `${process.env.NEXT_PUBLIC_BASE_PATH}/logo.png`
+  env: { NEXT_PUBLIC_BASE_PATH: basePath },
   turbopack: {
     rules: {
       "*.css": {
